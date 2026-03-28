@@ -59,7 +59,7 @@ button:hover {
   background: darkred;
 }
 
-#secretImage {
+#secretVideo {
   display: none;
   position: fixed;
   top: 0;
@@ -84,7 +84,7 @@ button:hover {
   <div class="folder">📁 Matei Bolog</div>
   <div class="folder">📁 Olariu Stefan</div>
   <div class="folder">📁 Daniel</div>
-   <div class="folder">📁 Horia</div>
+  <div class="folder">📁 Horia</div>
   <div class="folder">📁 Alin</div>
   <div class="folder">📁 Calin Darius</div>
   <div class="folder">📁 Eduard</div>
@@ -100,7 +100,7 @@ button:hover {
 
   <button id="revealBtn" onclick="reveal()">REVEAL</button>
 
-  <img id="secretImage" src="imaginea-ta.jpg">
+  <video id="secretVideo" src="video.mp4"></video>
 
   <audio id="audio" src="melodie.mp3"></audio>
 </div>
@@ -140,8 +140,9 @@ const interval = setInterval(updateTimer, 1000);
 updateTimer();
 
 function reveal() {
-  document.getElementById("secretImage").style.display = "block";
-  document.getElementById("audio").play();
+  const video = document.getElementById("secretVideo");
+  video.style.display = "block";
+  video.play();
 }
 </script>
 
